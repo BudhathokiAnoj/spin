@@ -1,0 +1,31 @@
+body{
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+.main{
+    position: absolute;
+    height: 200px;
+    top: 25%;
+    left: 43%;
+    width: 200px;
+    -webkit-box-reflect:below 2px linear-gradient(#0001,#0004);
+}
+.child{
+    height: calc(100% - 12px);
+    width: calc(100% - 12px);
+    border-radius: 50%;
+    border-bottom: 5px solid red;
+    position: absolute;
+    animation: spin 3s ease-out infinite;
+}
+@keyframes spin{
+    20%{
+        width: calc(100% - 15%);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
